@@ -14,7 +14,7 @@ export default function Home({ blog }) {
     <>
     <Header />
     <div>
-      
+       
       <ul>
         {blog.map((blog) => (
           <li key={blog.id}>
