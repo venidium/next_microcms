@@ -14,7 +14,12 @@
     "eslint-config-next": "13.1.6",
     "microcms-js-sdk": "^2.3.2",
     "next": "13.1.6",
+    "next-optimized-images": "^2.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.27",
+    "dotenv": "^16.0.3"
   }
 }

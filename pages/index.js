@@ -1,10 +1,20 @@
 // pages/index.js
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Link from "next/link";
 import { client } from "../libs/client";
 
+import Image from 'next/image';
+
+
+
+
 export default function Home({ blog }) {
   return (
-    <div>  
+    <>
+    <Header />
+    <div>
+      
       <ul>
         {blog.map((blog) => (
           <li key={blog.id}>
@@ -13,6 +23,26 @@ export default function Home({ blog }) {
         ))}
       </ul>
     </div>
+    
+    <a
+      href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      By{' '}
+      <Image
+        src="/img.jpg"
+        alt="Vercel Logo"
+      
+        width={1000}
+        height={240}
+        priority
+      />
+    </a>
+
+    <Footer />
+    </>
+    
   );
 }
 
@@ -25,3 +55,6 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+
+
